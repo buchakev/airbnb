@@ -16,7 +16,7 @@ before_action :require_same_user, only: [:edit, :update]
         if @room.save
             if params[:images]
                 params[:images].each do |i|
-                    @room.photos.create(image:i)
+                    @room.photos.create(image: i)
                 end
             end
             @photos = @rooms.photos
@@ -38,10 +38,9 @@ before_action :require_same_user, only: [:edit, :update]
         if @room.update(room_params)
             if params[:images]
                 params[:images].each do |i|
-                    @room.photos.create(image:i)
+                    @room.photos.create(image: i)
                 end
             end
-            @photos = @rooms.photos
             redirect_to edit_room_path(@room), notice: "Modification enregistrée..."
         else
             render :edit
