@@ -19,8 +19,8 @@ before_action :require_same_user, only: [:edit, :update]
                     @room.photos.create(image: i)
                 end
             end
-            @photos = @rooms.photos
-            redirect_to edit_room_path(@room), notice: "Votre annonce a été ajouté avec succès"
+            @photos = @room.photos
+            redirect_to edit_room_path(@room), notice:"Votre logement a été ajouté"
         else
             render :new
         end
@@ -31,7 +31,7 @@ before_action :require_same_user, only: [:edit, :update]
     end
     
     def edit
-       @photos = @room.photos 
+       @photos = @room.photos
     end
     
     def update
@@ -41,7 +41,7 @@ before_action :require_same_user, only: [:edit, :update]
                     @room.photos.create(image: i)
                 end
             end
-            redirect_to edit_room_path(@room), notice: "Modification enregistrée..."
+            redirect_to edit_room_path(@room), notice:"Modification enregistrée..."
         else
             render :edit
         end
@@ -61,6 +61,6 @@ private
             flash[:danger] = "Vous n'avez pas le droit de modifier cette page"
             redirect_to root_path
         end
-    end    
+    end
 end
 
