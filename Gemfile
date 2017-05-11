@@ -21,6 +21,7 @@ gem 'rails-i18n'
 gem "paperclip"
 gem 'toastr-rails'
 gem "font-awesome-sass"
+gem 'geocoder'
 
 
 # Use jquery as the JavaScript library
