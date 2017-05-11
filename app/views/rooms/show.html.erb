@@ -108,7 +108,7 @@
                     <% end %>
     
                     <!-- Wrapper for slides -->
-                    <div class="carousel-inner">
+                    <div class="carousel-inner" role="listbox">
                         <% if @photos %>
                             <% @photos.each do |photo| %>
                                 <div class="item <%= 'active' if photo.id == @photos[0].id %>">
@@ -116,7 +116,7 @@
                                 </div>
                             <% end %>
                         <% end %>
-    
+                    </div>
                     <!-- Left and right controls -->
                     <a class="left carousel-control" href="#myCarousel" data-slide="prev">
                         <span class="glyphicon glyphicon-chevron-left"></span>
@@ -130,4 +130,6 @@
             </div>
         </div>
     </div>
+    
+    
 </div>
