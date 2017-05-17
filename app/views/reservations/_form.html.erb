@@ -37,7 +37,7 @@
     
     <%= f.hidden_field :room_id, value: @room.id %>
     <%= f.hidden_field :price, value: @room.price %>
-    <%= f.hidden_field :total, id: 'resevation_total' %>
+    <%= f.hidden_field :total, id: 'reservation_total' %>
     
     <br>
     
@@ -92,7 +92,6 @@
                             'room_id': <%= @room.id %>
                             
                         }
-                            
                             $.ajax({
                                 url: '/preview',
                                 data: input,
