@@ -23,6 +23,7 @@ gem 'toastr-rails'
 gem "font-awesome-sass"
 gem 'geocoder'
 gem 'jquery-ui-rails'
+gem 'ransack'
 
 
 # Use jquery as the JavaScript library
