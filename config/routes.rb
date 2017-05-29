@@ -15,8 +15,8 @@ Rails.application.routes.draw do
     end
     resources :photos
     
-    ressources :conversations, only: [:index, :create] do
-     resources :messages, :only: [:index, :create]
+    resources :conversations, only: [:index, :create] do
+       resources :messages, only: [:index, :create]
     end
    
  get '/preload' => 'reservations#preload'
