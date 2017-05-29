@@ -24,6 +24,7 @@ gem "font-awesome-sass"
 gem 'geocoder'
 gem 'jquery-ui-rails'
 gem 'ransack'
+gem 'rails-timeago'
 
 
 # Use jquery as the JavaScript library
