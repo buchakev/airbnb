@@ -3,9 +3,9 @@
 Devise.setup do |config|
 
 case Rails.env
-when "development"
+  when "development"
   config.omniauth :facebook, '512722898851807', '60f383be7afd440fd2e3bbcada6335a0', scope:"email", info_fields:'email,name'
-when "production"
+  when "production"
   config.omniauth :facebook, ENV['FACEBOOK_KEY'], ENV['FACEBOOK_SECRET'], scope:"email", info_fields:'email,name'
 end
   
@@ -20,7 +20,7 @@ end
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'Aiirbnb <no-reply@airbnb.com'
+  config.mailer_sender = 'Aiirbnb <no-reply@airbnb.com>'
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
