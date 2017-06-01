@@ -2,16 +2,16 @@ module ApplicationHelper
     
     def avatar_url(user)
  
-    if user.image
+        if user.image
  
-       user.image
+        user.image
  
-    else
+        else
  
-       user.avatar.url
+        user.avatar.url
+ 
+        end
  
     end
- 
- end
     
 end
